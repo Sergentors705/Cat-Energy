@@ -1,9 +1,13 @@
 import gulp from 'gulp';
-import htmlmin from 'gulp-htmlmin';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
+import {deleteAsync} from 'del';
 import browser from 'browser-sync';
 
 //Html
@@ -12,6 +16,19 @@ export const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin())
   .pipe(gulp.dest('build/'))
+}
+
+//Cleaner
+
+const cleaner = () => {
+  return deleteAsync('build');
+};
+
+// Fonts
+
+const fonts = () => {
+  return gulp.src('source/fonts/*.*')
+  .pipe(gulp.dest('build/fonts'));
 }
 
 // Styles
@@ -25,6 +42,47 @@ export const styles = () => {
     ]))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+//Scripts minification
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'));
+}
+
+//Images copy
+
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'));
+}
+
+//Images optimisation
+
+const images = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'));
+}
+
+//SVG optimization
+
+const svg = () => {
+  return gulp.src('source/img/**/*.svg')
+  .pipe(svgo())
+  .pipe(gulp.dest('build/img'));
+}
+
+//WEBP convertation
+
+const webp = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(squoosh({
+    webp:{}
+  }))
+  .pipe(gulp.dest('build/img'));
 }
 
 // Server
@@ -47,6 +105,18 @@ const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/*.html').on('change', () => {gulp.series(html)(); browser.reload();});
 }
+
+export const build = gulp.series(
+  cleaner,
+  copyImages,
+  svg,
+  fonts,
+  gulp.parallel(
+    html,
+    scripts,
+    styles,
+  ),
+);
 
 export default gulp.series(
   html, styles, server, watcher

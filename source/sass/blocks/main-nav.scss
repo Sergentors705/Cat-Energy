@@ -1,0 +1,79 @@
+@import "./global/variables";
+
+.main-nav {
+  position: relative;
+  min-height: 65px;
+  padding: 11px 20px 17px 20px;
+}
+
+.main-nav__logo-link {
+}
+
+.main-nav__logo-icon {
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 60px;
+  }
+}
+
+.main-nav__logo-text {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.main-nav__menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 4;
+}
+
+.main-nav__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 3;
+}
+
+.main-nav__menu--closed {
+  display: none;
+}
+
+.main-nav__menu--opened {
+  display: flex;
+}
+
+.main-nav__menu--nojs {
+  display: flex;
+}
+
+.main-nav__menu-item {
+  width: 100%;
+}
+
+.main-nav__menu-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+  padding-top: 7px;
+  background-color: $white;
+  border-top: 1px solid $gray-border;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: $black;
+}

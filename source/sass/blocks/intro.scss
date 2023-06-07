@@ -1,0 +1,22 @@
+@import "./global/variables";
+
+.intro__container {
+  width: 100%;
+  min-height: 302px;
+  position: relative;
+  background-image: url("/img/intro-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $filter-green;
+    opacity: 85%;
+    // z-index: 4;
+  }
+}

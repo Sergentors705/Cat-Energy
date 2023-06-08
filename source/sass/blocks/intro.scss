@@ -1,9 +1,17 @@
 @import "./global/variables";
 
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .intro__container {
   width: 100%;
   min-height: 302px;
   position: relative;
+  padding-top: 27px;
   background-image: url("/img/intro-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top;
@@ -17,6 +25,28 @@
     left: 0;
     background-color: $filter-green;
     opacity: 85%;
-    // z-index: 4;
   }
+}
+
+.intro__title {
+  margin-bottom: 25px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  color: $white;
+}
+
+.intro__text {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+}
+
+.intro__image {
+  position: relative;
+  margin-top: -135px;
+  margin-bottom: 3px;
 }

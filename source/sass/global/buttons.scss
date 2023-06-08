@@ -1,0 +1,14 @@
+@import "./global/variables";
+
+.btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  background-color: $green;
+  font-size: 14px;
+  line-height: 18px;
+  color: $white;
+  text-transform: uppercase;
+}

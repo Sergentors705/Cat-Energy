@@ -3,7 +3,7 @@
 .main-nav {
   position: relative;
   min-height: 65px;
-  padding: 11px 20px 17px 20px;
+  padding: 10px 20px;
 }
 
 .main-nav__logo-link {
@@ -70,10 +70,14 @@
   min-height: 56px;
   padding-top: 7px;
   background-color: $white;
-  border-top: 1px solid $gray-border;
+  border-top: 1px solid $border-gray;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
   color: $black;
+}
+
+.menu-toggle__icon--close {
+  display: none;
 }

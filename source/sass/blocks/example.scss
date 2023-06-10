@@ -1,0 +1,31 @@
+@import "./global/variables";
+
+.example {
+  padding: 25px 20px 40px 20px;
+  background-color: $background-gray-2;
+}
+
+.example__title {
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  color: $black;
+}
+
+.example__text {
+  margin-bottom: 20px;
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.example__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.example-card {
+
+}

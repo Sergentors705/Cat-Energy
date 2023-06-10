@@ -1,0 +1,79 @@
+@import "./global/variables";
+
+.how-it-works {
+  margin-bottom: 49px;
+  padding-left: 20.5px;
+  padding-right: 20.5px;
+}
+
+.how-it-works__title {
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  color: $black;
+}
+
+.how-it-works__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.how-it-works__item {
+  position: relative;
+  min-height: 60px;
+  padding-top: 2px;
+}
+
+.how-it-works__number {
+  display: none;
+}
+
+.how-it-works__text {
+  font-family: "Arial";
+  padding-left: 80px;
+  font-size: 14px;
+  line-height: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $green;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 15px;
+  }
+}
+
+.how-it-works__text--leaf {
+  &::after {
+    content: url("/img/leaf.svg");
+  }
+}
+
+.how-it-works__text--tub {
+  &::after {
+    content: url("/img/tub.svg");
+  }
+}
+
+.how-it-works__text--eat {
+  &::after {
+    content: url("/img/eat.svg");
+  }
+}
+
+.how-it-works__text--clock {
+  &::after {
+    content: url("/img/clock.svg");
+  }
+}

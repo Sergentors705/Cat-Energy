@@ -24,8 +24,50 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+  margin-bottom: 34px;
 }
 
 .example-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+  border: 1px solid $special-gray;
+  border-radius: 3px;
+}
 
+.example-card__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.example-card__text {
+  position: absolute;
+  top: calc(100% - 9px);
+  left: 50%;
+  transform: translatex(-50%);
+  padding: 0 16px;
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+  text-align: center;
+  background-color: $background-gray-2;
+}
+
+.example__price {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.example__slider {
+  min-height: 256px;
 }

@@ -1,0 +1,37 @@
+@import "global/variables";
+
+.extra-product-card {
+  padding: 13px 0 18px;
+  border-bottom: 1px solid $special-gray-3;
+}
+
+.extra-product-card__title {
+  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $special-dark-gray-2;
+}
+
+.extra-product-card__description {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.extra-product-card__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra-product-card__text {
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 14px;
+  color: $special-dark-gray;
+}
+
+.extra-product-card__btn {
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 20px;
+}

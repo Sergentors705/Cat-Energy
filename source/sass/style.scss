@@ -3,6 +3,7 @@
 @import "global/visually-hidden";
 @import "global/normalize";
 @import "global/buttons";
+@import "global/utility";
 @import "blocks/page";
 @import "blocks/main-nav";
 @import "blocks/intro";
@@ -10,3 +11,8 @@
 @import "blocks/how-it-works";
 @import "blocks/example";
 @import "blocks/page-footer";
+@import "blocks/products";
+@import "blocks/product-card";
+@import "blocks/show-more";
+@import "blocks/additional";
+@import "blocks/extra-product-card";

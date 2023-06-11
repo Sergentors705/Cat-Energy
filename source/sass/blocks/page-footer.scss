@@ -7,9 +7,13 @@
   padding: 26px 20px;
 }
 
+.page-footer__map-address--catalog {
+  background-color: $background-gray;
+}
+
 .page-footer__map-title {
   font-size: 16px;
-  font-weight: 400;
+
   line-height: 20px;
   text-transform: uppercase;
   color: $black;

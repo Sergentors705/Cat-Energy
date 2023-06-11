@@ -1,0 +1,14 @@
+@import "global/variables";
+
+.products__title-wrapper {
+  min-height: 106px;
+  padding: 20px;
+  padding-top: 27px;
+  border-top: 1px solid $pseudo-gray;
+  border-bottom: 1px solid $pseudo-gray;
+}
+
+.products__title {
+  font-size: 36px;
+  line-height: 36px;
+}

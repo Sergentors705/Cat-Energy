@@ -1,0 +1,23 @@
+@import "global/variables";
+
+.program {
+  padding: 27px 0 32px;
+  border-top: 1px solid $pseudo-gray;
+}
+
+.program__title {
+  margin-bottom: 37px;
+  margin-left: 20px;
+  font-size: 36px;
+  line-height: 36px;
+  color: $black;
+}
+
+.program__text {
+  margin-bottom: 39px;
+  margin-left: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $black;
+}

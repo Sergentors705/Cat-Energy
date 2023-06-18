@@ -85,16 +85,16 @@
         <h1 class="visually-hidden">Подбор программы питания для котов</h1>
         <section class="program">
           <h2 class="program__title">Подбор программы</h2>
-          <p class="program__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <p class="program__text">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
           <form class="program__form program-form" action="">
             <fieldset class="program-form__fieldset program-form__fieldset--about">
               <label class="program-form__label" for="name">ИМЯ:*
                 <input class="program-form__input" type="text" name="name-field" id="name" required value="барсик">
               </label>
-              <label class="program-form__label" for="weight">Вес (кг):*
+              <label class="program-form__label" for="weight">Вес&nbsp;(кг):*
                 <input class="program-form__input" type="text" name="weight-field" id="weight" required value="7">
               </label>
-              <label class="program-form__label" for="age">Возраст (лет):
+              <label class="program-form__label" for="age">Возраст&nbsp;(лет):
                 <input class="program-form__input" type="text" name="age-field" id="age" value="7">
               </label>
             </fieldset>
@@ -124,24 +124,26 @@
               </ul>
             </fieldset>
             <fieldset class="program-form__fieldset program-form__fieldset--contacts">
-              <legend class="program-form__legend program-form__legend--contacts">Контактные данные (владельца кота)</legend>
-              <label class="program-form__label" for="email">ИМЯ:*
-                <div class="program-form__custom-input program-form__custom-input--email">
-                  <input class="program-form__input" type="email" name="email-field" id="email" required value="kuklachev@gmail.com">
-                </div>
-              </label>
-              <label class="program-form__label" for="telephone">Вес (кг):*
-                <div class="program-form__custom-input program-form__custom-input--tel">
-                  <input class="program-form__input" type="tel" name="telephone-field" id="telephone" pattern="[8] ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" required value="8 (960) 900-60-90">
-                </div>
-              </label>
+              <div class="test-wrapper">
+                <h3 class="program-form__title program-form__title--contacts">Контактные данные (владельца кота)</h3>
+                <label class="program-form__label" for="email">e-mail:*
+                  <div class="program-form__custom-input program-form__custom-input--email">
+                    <input class="program-form__input" type="email" name="email-field" id="email" required value="kuklachev@gmail.com">
+                  </div>
+                </label>
+                <label class="program-form__label" for="telephone">Телефон:*
+                  <div class="program-form__custom-input program-form__custom-input--tel">
+                    <input class="program-form__input" type="tel" name="telephone-field" id="telephone" pattern="[8] ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" required value="8 (960) 900-60-90">
+                  </div>
+                </label>
+              </div>
             </fieldset>
             <fieldset class="program-form__fieldset program-form__fieldset--comments">
-              <legend class="program-form__legend program-form__legend--comments">Комментарий</legend>
+              <h3 class="program-form__title program-form__title--comments">Комментарий</h3>
               <textarea class="program-form__textarea" name="comments" id="" cols="30" rows="10">Расскажите обо всех повАдках кота</textarea>
             </fieldset>
             <fieldset class="program-form__fieldset program-form__fieldset--additional">
-              <legend class="program-form__legend program-form__legend--additional">Дополнительно</legend>
+              <h3 class="program-form__title program-form__title--additional">Дополнительно</h3>
               <ul class="program-form__list program-form__list--additional">
                 <li class="program-form__item-additional">
                   <label class="program-form__label-checkbox" for="program-form-additional-1">
@@ -182,7 +184,7 @@
       </main>
       <footer class="page-footer">
         <div class="page-footer__map">
-          <address class="page-footer__map-address">
+          <address class="page-footer__map-address page-footer__map-address--form">
             <h3 class="page-footer__map-title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
             <p class="page-footer__map-text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </address>

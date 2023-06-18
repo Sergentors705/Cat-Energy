@@ -1,0 +1,105 @@
+@import "global/variables";
+
+.program-form__fieldset--about {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 20px 23px;
+  border-bottom: 1px solid $pseudo-gray;
+}
+
+.program-form__fieldset--target {
+  padding: 22px 20px 18px;
+  border-bottom: 1px solid $pseudo-gray;
+}
+
+.program-form__fieldset--contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.test-wrapper {
+
+  padding: 26px 20px 18px;
+}
+
+.program-form__title {
+  font-size: 24px;
+  line-height: 26px;
+  color: $black;
+}
+
+.program-form__title--contacts {
+  margin-bottom: 21px;
+}
+
+.program-form__label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__label-radio {
+  min-height: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.program-form__custom-input {
+  width: 100%;
+}
+
+.program-form__input {
+  width: 100%;
+  min-height: 45px;
+  margin-left: 13px;
+  padding: 13px 15px 10px;
+  border: 1px solid $input-gray;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.program-form__list--target {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.program-form__mark-target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $special-gray;
+  border-radius: 50%;
+}
+
+.program-form__input-radio:checked + .program-form__mark-target::after {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: $green;
+}
+
+.program-form__label-target {
+  padding-left: 45px;
+  text-transform: uppercase;
+}

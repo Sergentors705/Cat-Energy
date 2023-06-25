@@ -17,11 +17,16 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  padding: 0 20px 23px;
+}
+
+.program-form__fieldset--comments {
+  padding: 26px 20px 23px;
 }
 
 .test-wrapper {
-
-  padding: 26px 20px 18px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .program-form__title {

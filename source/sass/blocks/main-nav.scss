@@ -4,6 +4,15 @@
   position: relative;
   min-height: 65px;
   padding: 10px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 .main-nav__logo-link {
@@ -27,6 +36,10 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__menu-toggle {
@@ -34,6 +47,14 @@
   top: 20px;
   right: 20px;
   z-index: 4;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__menu--closed {
+  display: none;
 }
 
 .main-nav__menu {
@@ -45,10 +66,17 @@
   align-items: center;
   width: 100%;
   z-index: 3;
-}
 
-.main-nav__menu--closed {
-  display: none;
+  @media (min-width: $tablet-width) {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 36px;
+    width: auto;
+    position: static;
+  }
 }
 
 .main-nav__menu--opened {
@@ -61,6 +89,10 @@
 
 .main-nav__menu-item {
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
 }
 
 .main-nav__menu-link {
@@ -76,6 +108,15 @@
   line-height: 26px;
   text-transform: uppercase;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    min-height: auto;
+    padding-top: 0;
+    border: none;
+    font-weight: 400;
+    line-height: 24px;
+  }
 }
 
 .menu-toggle__icon--close {

@@ -4,14 +4,25 @@
   margin-bottom: 49px;
   padding-left: 20.5px;
   padding-right: 20.5px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 49px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .how-it-works__title {
   margin-bottom: 40px;
   font-size: 36px;
-
   line-height: 40px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .how-it-works__list {
